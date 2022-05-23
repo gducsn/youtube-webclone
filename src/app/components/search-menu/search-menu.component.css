@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inconsolata:wght@200&family=Montserrat:wght@100&family=Outfit:wght@100&family=Roboto:wght@300&display=swap');
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 100vw;
+  background-color: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.logo_and_hamb {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.yt_logo {
+  width: 120px;
+  height: 56px;
+
+}
+
+.hamb_menu:hover,
+.yt_logo:hover {
+  cursor: pointer;
+}
+
+.hamb_menu_container {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamb_menu {
+  filter: invert(1);
+  height: 24px;
+  width: 30px;
+}
+
+.search_and_mic {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.mic_search {
+  filter: invert(1);
+}
+
+.search_and_mic button {
+  height: 44px;
+  width: 60px;
+  background-color: #323232;
+  border: none;
+  border: 1px solid #323232;
+  border-radius: 0;
+  z-index: 2;
+}
+
+.button_search {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.search_and_mic input::placeholder {
+  padding: 1px 0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #888888;
+  font-weight: 500;
+  font-family: "Roboto", "Noto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px
+}
+
+
+
+.search_and_mic button img {
+  height: 24px;
+  padding: 8px;
+  align-self: center;
+  filter: invert(1);
+  margin-left: 1px;
+}
+
+.search_and_mic input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #323232;
+  border-radius: 0;
+  background-color: #121212;
+  z-index: 3;
+  position: relative;
+}
+
+.search_and_mic input:focus {
+  border-top: 1px solid rgb(62, 166, 255);
+  border-bottom: 1px solid rgb(62, 166, 255);
+  border-right: 1px solid rgb(62, 166, 255);
+  outline: none;
+}
+
+
+.search_and_mic {
+  flex-basis: 538px;
+  position: relative;
+}
+
+.account_login {
+  padding-right: 16px;
+}
+
+.mic_class_search {
+  height: 40px;
+  width: 40px;
+  background-color: #181818;
+  border-radius: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 8px;
+}
+
+.mic_class_search img {
+  height: 24px;
+  width: 24px;
+  margin: 8px 8px;
+}
+
+.account_login,
+.block_account_blue {
+  display: flex;
+  align-items: center;
+}
+
+.account_login img,
+.dot_login {
+  filter: invert(1);
+  height: 24px;
+  padding: 0 10px;
+}
+
+
+.block_account_blue {
+  font-family: Roboto;
+  color: white;
+  max-height: 40px;
+  background-color: transparent;
+  border: 1px solid rgb(62, 166, 255);
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_and_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5px;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 5px
+}
+
+.img_and_text img {
+  margin: -7px;
+}
+
+.block_account_blue h1 {
+  color: rgb(62, 166, 255);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-transform: uppercase;
+  user-select: text;
+  white-space: nowrap;
+  -moz-text-size-adjust: none;
+}
+
+.block_account_blue img {
+  filter: invert(48%) sepia(99%) saturate(685%) hue-rotate(185deg) brightness(100%) contrast(104%);
+}
+
+
+.squares_container {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot_containter {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot_containter img {
+  width: 24px;
+  height: 24px;
+  padding: 8px 8px;
+}
+
+.before_input_search img {
+  filter: invert(1);
+  width: 24px;
+  height: 24px;
+  padding: 8px 8px;
+}
+
+.before_input_search {
+  position: absolute;
+  height: 44px;
+  width: 40px;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  left: -40px;
+}
+
+
+.before_input_search_none {
+  display: none;
+}
+
+.before_input_search button {
+  outline: none;
+  background-color: transparent;
+  border-right: none;
+  border-top: 1px solid rgb(62, 166, 255);
+  border-bottom: 1px solid rgb(62, 166, 255);
+  border-left: 1px solid rgb(62, 166, 255);
+}
+
+.search_and_mic .remove_border {
+  border-left: none;
+}
+
+
+.button_search img:hover {
+  cursor: pointer;
+}
+
+.mic_class_search {
+  cursor: pointer;
+}
+
+.button_search_img:hover:after {
+  content: 'Cerca';
+  position: relative;
+  top: 35px;
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  padding: 10px;
+  font-family: Roboto;
+  color: white;
+  opacity: .9;
+  font-size: 0.8em;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.mic_class_search:hover:after {
+  content: 'Esegui una ricerca vocale';
+  position: absolute;
+  top: 85px;
+  white-space: nowrap;
+
+  background-color: gray;
+  padding: 10px;
+  font-family: Roboto;
+  color: white;
+  opacity: .9;
+  font-size: 15px;
+  font-size: 0.7em;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.app_youtube,
+.dot_login {
+  cursor: pointer;
+}
+
+.squares_container:hover::after {
+  content: 'App YouTube';
+  position: absolute;
+  top: 85px;
+  white-space: nowrap;
+
+  background-color: gray;
+  padding: 10px;
+  font-family: Roboto;
+  color: white;
+  opacity: .9;
+  font-size: 15px;
+  font-size: 0.7em;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.dot_containter:hover::after {
+  content: 'Impostazioni';
+  position: absolute;
+  top: 85px;
+  white-space: nowrap;
+
+  background-color: gray;
+  padding: 10px;
+  font-family: Roboto;
+  color: white;
+  opacity: .9;
+  font-size: 15px;
+  font-size: 0.7em;
+  font-weight: 500;
+  border-radius: 2px;
+}

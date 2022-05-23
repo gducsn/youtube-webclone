@@ -1,0 +1,46 @@
+<nav>
+
+  <div class="logo_and_hamb">
+    <div class="hamb_menu_container">
+      <img class="hamb_menu" src="assets/icons_svg/hamburger.png" alt="">
+    </div>
+
+    <img class="yt_logo" src="assets/icons_svg/yt_logo.png" alt="">
+  </div>
+
+  <div class="search_and_mic">
+
+    <div class="before_input_search" [class.before_input_search_none]="search_input_boolean">
+      <button><img class="inv_search" src="assets/icons_svg/search.svg" alt=""></button>
+    </div>
+    <input type="text" [class.remove_border]="!search_input_boolean" placeholder="Cerca" (focus)="add()"
+      (focusout)="remove()">
+
+
+    <div class="button_search">
+      <button class="button_search_img"><img src="assets/icons_svg/search.svg" alt=""></button>
+    </div>
+    <div class="mic_class_search">
+      <img class="mic_search" src="assets/icons_svg/mic.svg" alt="">
+    </div>
+  </div>
+
+  <div class="account_login">
+    <div class="squares_container">
+      <img class="app_youtube" src="assets/icons_svg/squares.svg" alt="">
+    </div>
+    <div class="dot_containter">
+      <img class="dot_login" src="assets/icons_svg/dots_.png" alt="">
+    </div>
+
+    <div class="block_account_blue">
+      <div class="img_and_text">
+        <img src="assets/icons_svg/account.svg" alt="">
+        <h1>ACCEDI</h1>
+      </div>
+
+    </div>
+  </div>
+
+
+</nav>
