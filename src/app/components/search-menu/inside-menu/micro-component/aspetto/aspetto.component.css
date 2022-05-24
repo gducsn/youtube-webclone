@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inconsolata:wght@200&family=Montserrat:wght@100&family=Outfit:wght@100&family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.title_arrow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 8px;
+  border-bottom: 1px solid gray;
+  flex: 1;
+
+}
+
+.title_arrow img {
+  filter: invert(1);
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.title_arrow h1 {
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text_inside {
+  padding: 8px 8px;
+}
+
+.text_inside p {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #6e6e6e;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 0px 8px;
+}
+
+.select_option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 8px;
+}
+
+.select_inside {
+  padding: 8px 8px;
+}
+
+.select_inside label {
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+
+}
+
+.select_inside input {
+  margin-right: 8px;
+}
+
+
+.one img,
+.three img {
+  visibility: hidden;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.two img {
+  filter: invert(1);
+  height: 34px;
+  margin-right: 10px;
+}
+
+.two,
+.one,
+.three {
+  display: flex;
+  align-items: center;
+}
+
+.title_arrow img:hover {
+  cursor: pointer;
+}

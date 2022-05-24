@@ -1,0 +1,50 @@
+<div class="main">
+  <div class="container_data" [class.remove_all]="remove_all">
+    <img src="assets/icons_inside/moon.png" alt="">
+    <h1 (click)="aspettoChange()">Aspetto: tema scuro</h1>
+    <img class="arrow_class" src="assets/icons_inside/arrow_.png" alt="">
+  </div>
+  <div class="container_data" [class.remove_all]="remove_all">
+    <img src="assets/icons_inside/translate.png" alt="">
+    <h1>Lingua: Italiano</h1>
+    <img class="arrow_class" src="assets/icons_inside/arrow_.png" alt="">
+  </div>
+  <div class="container_data" [class.remove_all]="remove_all">
+    <img src="assets/icons_inside/world.png" alt="">
+    <h1>Località: Italia</h1>
+    <img class="arrow_class" src="assets/icons_inside/arrow_.png" alt="">
+  </div>
+  <div class="container_data" [class.remove_all]="remove_all">
+    <img src="assets/icons_inside/settings.png" alt="">
+    <h1>Impostazioni</h1>
+
+  </div>
+  <div class="container_data" [class.remove_all]="remove_all">
+    <img src="assets/icons_inside/data.png" alt="">
+    <h1>I tuoi data su YouTube</h1>
+
+  </div>
+  <div class="container_data" [class.remove_all]="remove_all">
+    <img src="assets/icons_inside/help.png" alt="">
+    <h1> Guida</h1>
+
+  </div>
+  <div class="container_data" [class.remove_all]="remove_all">
+    <img src="assets/icons_inside/escla.png" alt="">
+    <h1>Invia Feedback</h1>
+
+  </div>
+  <div class="container_data" [class.remove_all]="remove_all">
+    <img src="assets/icons_inside/key.png" alt="">
+    <h1>Scorciatoie da tastiera</h1>
+
+  </div>
+  <div class="container_data_last" [class.remove_all]="remove_all">
+
+    <h1>Modalità con restrizioni: non attiva</h1>
+    <img class="arrow_class" src="assets/icons_inside/arrow_.png" alt="">
+  </div>
+  <div *ngIf="aspetto">
+    <app-aspetto></app-aspetto>
+  </div>
+</div>

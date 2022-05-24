@@ -30,7 +30,11 @@
       <img class="app_youtube" src="assets/icons_svg/squares.svg" alt="">
     </div>
     <div class="dot_containter">
-      <img class="dot_login" src="assets/icons_svg/dots_.png" alt="">
+      <img (click)="menuInside()" class="dot_login" src="assets/icons_svg/dots_.png" alt="">
+    </div>
+    <div *ngIf="true" class="inside_menu">
+      <!-- menu_inside_boolean -->
+      <app-inside-menu></app-inside-menu>
     </div>
 
     <div class="block_account_blue" [class.removeAll]="media_input_boolean">

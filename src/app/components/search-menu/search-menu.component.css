@@ -24,8 +24,9 @@ nav {
 }
 
 .yt_logo {
-  height: 56px;
-
+  height: 66px;
+  margin: 0;
+  padding: 0;
 }
 
 .hamb_menu:hover,
@@ -36,10 +37,11 @@ nav {
 .hamb_menu_container {
   width: 40px;
   height: 40px;
-  padding: 8px;
+  padding: 8px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .hamb_menu {
@@ -47,6 +49,7 @@ nav {
   height: 24px;
   width: 30px;
 }
+
 
 .search_and_mic {
   display: flex;
@@ -119,7 +122,7 @@ nav {
 
 
 .search_and_mic {
-  flex-basis: 538px;
+  flex-basis: 638px;
   position: relative;
 }
 
@@ -665,4 +668,20 @@ nav {
 
 .before_input_search_none {
   visibility: hidden;
+}
+
+.block_account_blue:hover {
+  cursor: pointer;
+}
+
+
+.dot_containter {
+  position: relative;
+}
+
+.inside_menu {
+  position: absolute;
+  z-index: 20;
+  top: 47px;
+  right: 130px;
 }
