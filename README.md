@@ -4,7 +4,5 @@ I'm working with angular and every push I insert a screenshot of the work done. 
 ___________
 
 ![alt text](./screen/navbar.png)
-<br>
 ![alt text](./screen/navbarmenu1.png)
-<br>
 ![alt text](./screen/navbarmenu2.png)
