@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inconsolata:wght@200&family=Montserrat:wght@100&family=Outfit:wght@100&family=Roboto:wght@300&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -20,9 +24,8 @@ nav {
 }
 
 .yt_logo {
-  width: 120px;
   height: 56px;
-  margin-right: 70px;
+
 }
 
 .hamb_menu:hover,
@@ -56,7 +59,7 @@ nav {
 }
 
 .search_and_mic button {
-  height: 44px;
+  height: 40px;
   width: 60px;
   background-color: #323232;
   border: none;
@@ -88,11 +91,13 @@ nav {
 
 
 .search_and_mic button img {
-  height: 24px;
+  height: 40px;
+  width: 40px;
   padding: 8px;
   align-self: center;
   filter: invert(1);
   margin-left: 1px;
+  align-self: center;
 }
 
 .search_and_mic input {
@@ -161,10 +166,10 @@ nav {
   background-color: transparent;
   border: 1px solid rgb(62, 166, 255);
   border-radius: 2px;
-
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .img_and_text {
@@ -243,9 +248,6 @@ nav {
 }
 
 
-.before_input_search_none {
-  display: none;
-}
 
 .before_input_search button {
   outline: none;
@@ -271,10 +273,9 @@ nav {
 
 .button_search_img:hover:after {
   content: 'Cerca';
-  position: relative;
-  top: 35px;
+  position: absolute;
+  top: 85px;
   width: 40px;
-  height: 40px;
   background-color: gray;
   padding: 10px;
   font-family: Roboto;
@@ -339,4 +340,329 @@ nav {
   font-size: 0.7em;
   font-weight: 500;
   border-radius: 2px;
+}
+
+.logo_and_hamb,
+.search_and_mic,
+.account_login {
+  max-width: 100%;
+}
+
+.dot_containter img {
+  width: 40px;
+  height: 40px;
+}
+
+.button_search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.before_input_search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeAll {
+  display: none;
+}
+
+
+
+/* -------- */
+
+@media screen and (max-width: 656px) {
+  .search_and_mic input {
+    visibility: hidden;
+  }
+
+  .button_search button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-right: -10px;
+  }
+
+  .button_search button img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mic_class_search {
+    background-color: transparent;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .hamb_menu {
+    padding: 0;
+    margin: 0;
+  }
+
+  .yt_logo {
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .button_search button {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+
+}
+
+/* -------- */
+
+.flexMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media_q_flex {
+  display: flex;
+  flex: .9;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow_img {
+
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px;
+  flex: .1;
+}
+
+.arrow_img img {
+  filter: invert(1);
+  height: 25px;
+  width: 25px;
+}
+
+.input_side {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.input_side input {
+  width: 100%;
+  flex-basis: 500px;
+}
+
+
+.input_side input::placeholder {
+  padding: 1px 0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #888888;
+  font-weight: 500;
+  font-family: "Roboto", "Noto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px
+}
+
+.input_side input {
+  border: 1px solid #323232;
+  border-radius: 0;
+  background-color: #121212;
+  z-index: 3;
+  position: relative;
+  padding: 8px 8px;
+}
+
+.input_side input:focus {
+  border-top: 1px solid rgb(62, 166, 255);
+  border-bottom: 1px solid rgb(62, 166, 255);
+  border-right: 1px solid rgb(62, 166, 255);
+  outline: none;
+}
+
+.input_side span button {
+  background-color: #373737;
+  width: 60px;
+  height: 40px;
+  border: none;
+}
+
+.input_side span {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.input_side span button img {
+  align-self: center;
+  filter: invert(1);
+  height: 30px;
+  width: 30px;
+
+}
+
+.input_side span button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.search_inv_absolute span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_inv_absolute span button {
+  width: 40px;
+  height: 40px;
+  border: none;
+
+  outline: none;
+  background-color: transparent;
+  border-right: none;
+  border-top: 1px solid rgb(62, 166, 255);
+  border-bottom: 1px solid rgb(62, 166, 255);
+  border-left: 1px solid rgb(62, 166, 255);
+}
+
+.search_inv_absolute span button img {
+  align-self: center;
+  filter: invert(1);
+  height: 24px;
+  width: 24px;
+}
+
+.search_inv_absolute {
+  visibility: hidden;
+}
+
+.input_side .remove_border_two {
+  border-left: transparent;
+}
+
+.mic_after_input {
+  width: 40px;
+  height: 40px;
+  padding: 8px 8px;
+  margin: 0px 8px;
+  background-color: black;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mic_after_input img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.inv_visibile {
+  visibility: initial;
+  border-right: none;
+
+}
+
+#change_color {
+  background-color: black;
+}
+
+.arrow_img:hover {
+  cursor: pointer;
+}
+
+.arrow_img:hover::after {
+  content: 'Indietro';
+  position: absolute;
+  top: 65px;
+  white-space: nowrap;
+
+  background-color: gray;
+  padding: 10px;
+  font-family: Roboto;
+  color: white;
+  opacity: .9;
+  font-size: 15px;
+  font-size: 0.7em;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.input_side span button:hover {
+  cursor: pointer;
+}
+
+.input_side span button:hover::after {
+  content: 'Cerca';
+  position: absolute;
+  top: 65px;
+  white-space: nowrap;
+
+  background-color: gray;
+  padding: 10px;
+  font-family: Roboto;
+  color: white;
+  opacity: .9;
+  font-size: 15px;
+  font-size: 0.7em;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.mic_after_input:hover {
+  cursor: pointer;
+}
+
+.mic_after_input:hover::after {
+  content: 'Esegui una ricerca vocale';
+  position: absolute;
+  top: 65px;
+  white-space: nowrap;
+  right: 10px;
+  background-color: gray;
+  padding: 10px;
+  font-family: Roboto;
+  color: white;
+  opacity: .9;
+  font-size: 15px;
+  font-size: 0.7em;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+
+@media screen and (max-width: 401px) {
+  .mic_after_input {
+    display: none;
+  }
+}
+
+
+.before_input_search {
+  visibility: initial;
+}
+
+.before_input_search_none {
+  visibility: hidden;
 }
