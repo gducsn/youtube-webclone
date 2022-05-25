@@ -41,7 +41,7 @@
   </div>
   <div class="container_data_last" [class.remove_all]="remove_all">
 
-    <h1>Modalità con restrizioni: non attiva</h1>
+    <h1 (click)="changeRest()">Modalità con restrizioni: non attiva</h1>
     <img class="arrow_class" src="assets/icons_inside/arrow_.png" alt="">
   </div>
   <div *ngIf="aspetto">
@@ -54,7 +54,7 @@
   <div *ngIf="nazione">
     <app-nazione></app-nazione>
   </div>
-  <div *ngIf="true">
+  <div *ngIf="restrizioni">
     <app-restrizioni></app-restrizioni>
   </div>
 </div>

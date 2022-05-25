@@ -10,7 +10,7 @@ import { InsideMicroService } from 'src/app/services/nav-bar/inside-micro.servic
 export class SearchMenuComponent implements OnInit {
   constructor(private service: InsideMicroService){}
 
-  menuimp:boolean = true//this.service.menuimp;
+  menuimp:boolean = this.service.menuimp;
 
   search_input_boolean: boolean = true;
   search_boolean$ = of(this.search_input_boolean)
@@ -39,6 +39,18 @@ export class SearchMenuComponent implements OnInit {
   remove() {
     this.search_boolean$.subscribe(() => this.search_input_boolean = true)
   }
+  documentOnclick(){
+    return document.onclick = (args: any) : void => {
+      if(args.target.tagName === 'BODY') {
+        this.service.remove_all$.next(false)
+        this.service.remove_all$.subscribe((data:any) => this.service.remove_all = data)
+        this.service.menuimp$.next(false)
+        this.service.menuimp$.subscribe((data:boolean) => this.menuimp = data)
+        this.service.aspetto$.next(false)
+        this.service.remove_all$.subscribe((data:boolean) => this.service.remove_all = data)
+      }
+    } 
+  }
  
 menuInside() {
   if(!this.menuimp)
@@ -48,16 +60,8 @@ menuInside() {
     this.service.menuimp$.next(false)
     this.service.menuimp$.subscribe((data:boolean) => this.menuimp = data)
   }
-
-
-  document.onclick = (args: any) : void => {
-  if(args.target.tagName === 'BODY') {
-    this.service.remove_all$.next(false)
-    this.service.remove_all$.subscribe((data:any) => this.service.remove_all = data)
-    this.service.menuimp$.next(false)
-    this.service.menuimp$.subscribe((data:boolean) => this.menuimp = data)
-  }
-} 
+this.documentOnclick();
+  
 }
 
 

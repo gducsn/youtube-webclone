@@ -1,1 +1,34 @@
-<mat-slide-toggle></mat-slide-toggle>
+<div class="main">
+
+  <div class="text_arrow">
+    <div class="img_inside">
+      <img (click)=" back()" src="assets/icons_inside/backa.png" alt="">
+    </div>
+
+    <h1>Modalità con restrizioni</h1>
+  </div>
+
+  <div class="text_inside">
+    <h1>Consente di nascondere i video con contenuti potenzialmente inappropriati per i minorenni. Nessun filtro è
+      preciso al 100%.</h1>
+
+    <span>
+      <h1 class="text_inside_h1">Questa impostazione viene applicata solo a questo browser.</h1>
+    </span>
+  </div>
+
+  <div class="text_switch">
+    <h1>{{"Attiva la Modalità con restrizioni" | uppercase}} </h1>
+    <mat-slide-toggle [checked]="checked" (change)="change()"></mat-slide-toggle>
+
+  </div>
+  <div *ngIf="checked" class="switch">
+    <h1>
+      Il blocco della Modalità con restrizioni impedisce ad altri di modificarne l'impostazione in questo browser.
+
+    </h1>
+    <span>
+      <h1 class="text_inside_h1">Blocca la Modalità con restrizioni in questo browser</h1>
+    </span>
+  </div>
+</div>

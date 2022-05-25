@@ -9,10 +9,10 @@ import { InsideMicroService } from 'src/app/services/nav-bar/inside-micro.servic
 })
 export class InsideMenuComponent implements OnInit {
   aspetto: any = this.service.aspetto;
-  remove_all: any = true //this.service.remove_all;
+  remove_all: any = this.service.remove_all;
   lingua: boolean = this.service.lingua;
   nazione: boolean = this.service.nazione;
-  fourth: boolean = false;
+  restrizioni: boolean = this.service.restrizioni
   constructor(public service: InsideMicroService) { }
 
   ngOnInit(): void {
@@ -35,5 +35,12 @@ this.service.aspetto$.subscribe((data:boolean)=> this.aspetto = data)
     this.service.remove_all$.subscribe((data:boolean) => this.remove_all = data);
     this.service.nazione$.subscribe((data:boolean) => this.nazione = data)
   }
+
+  changeRest() {
+    this.service.changeRes();
+    this.service.remove_all$.subscribe((data:boolean) => this.remove_all = data);
+    this.service.restrizioni$.subscribe((data:boolean) => this.restrizioni = data)
+  }
+
 }
 
