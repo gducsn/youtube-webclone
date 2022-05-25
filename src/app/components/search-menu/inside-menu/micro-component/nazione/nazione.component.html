@@ -1,1 +1,22 @@
-<p>nazione works!</p>
+<div class="main">
+  <div class="header" (click)="backValue()">
+    <img src="assets/icons_inside/backa.png" alt="">
+    <h1>Scegli la tua lingua</h1>
+  </div>
+
+  <div class="text_list" *ngFor="let data of countryList; let i = index">
+    <div class="inside_list" #child [class.add]="data == 'Italy'">
+      <div class="div_img">
+        <img src="assets/icons_inside/check.png" alt="">
+      </div>
+
+      <h1>{{data}}</h1>
+    </div>
+
+
+  </div>
+
+
+
+
+</div>

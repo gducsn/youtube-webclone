@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+​
 @Component({
   selector: 'app-restrizioni',
   templateUrl: './restrizioni.component.html',
@@ -10,6 +12,7 @@ export class RestrizioniComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

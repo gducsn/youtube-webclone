@@ -5,19 +5,40 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class InsideMicroService {
-remove_all = false;
-aspetto = false;
+remove_all: boolean = false;
+aspetto: boolean = false;
+lingua: boolean = false;
+nazione: boolean = false;
+menuimp: boolean = false;
 
-remove_all$: any = new BehaviorSubject(this.remove_all)
+remove_all$: BehaviorSubject<boolean> = new BehaviorSubject(this.remove_all)
   
-aspetto$: any  = new BehaviorSubject(this.aspetto)
+aspetto$: BehaviorSubject<boolean>  = new BehaviorSubject(this.aspetto)
+
+lingua$: BehaviorSubject<boolean> = new BehaviorSubject(this.lingua)
+
+nazione$: BehaviorSubject<boolean> = new BehaviorSubject(this.nazione)
+
+menuimp$: BehaviorSubject<boolean> = new BehaviorSubject(this.menuimp)
 
   changeValue() {
     this.remove_all$.next(!this.remove_all)
     this.aspetto$.next(!this.aspetto)
   }
 
+  linguaChange() {
+    this.remove_all$.next(!this.remove_all)
+    this.lingua$.next(!this.lingua)
+  }
 
+nazioneChange() {
+  this.remove_all$.next(!this.remove_all)
+  this.nazione$.next(!this.nazione)
+}
+
+menuChange(){
+  this.menuimp$.next(!this.menuimp)
+}
 
 
 

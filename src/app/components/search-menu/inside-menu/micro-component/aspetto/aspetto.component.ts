@@ -14,9 +14,10 @@ export class AspettoComponent implements OnInit {
     
   }
 back() {
-  this.micro.changeValue()
-  this.micro.remove_all$.subscribe((data:any) => this.micro.remove_all = data)
-  this.micro.aspetto$.subscribe((data:any)=> this.micro.aspetto = data)
+  this.micro.remove_all$.next(false);
+  this.micro.aspetto$.next(false)
+  this.micro.remove_all$.subscribe((data:boolean) => this.micro.remove_all = data)
+  this.micro.aspetto$.subscribe((data:boolean)=> this.micro.aspetto = data)
 }
 
 }

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inconsolata:wght@200&family=Montserrat:wght@100&family=Outfit:wght@100&family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  overflow: scroll;
+  height: 100vh;
+  padding-bottom: 8px;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid gray;
+  padding: 8px 4px;
+}
+
+.header img:hover {
+  cursor: pointer;
+}
+
+.header img {
+  filter: invert(1);
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+h1 {
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.inside_list img {
+  visibility: hidden;
+}
+
+.inside_list {
+  display: flex;
+  align-items: center;
+}
+
+.inside_list:hover {
+  cursor: pointer;
+  background-color: #4c4c4c;
+  opacity: 0.88;
+}
+
+.text_list {
+  margin-top: 4px;
+}
+
+.div_img {
+  width: 40px;
+  padding: 8px 8px;
+  height: 40px;
+}
+
+.div_img img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.add img {
+  visibility: visible;
+}

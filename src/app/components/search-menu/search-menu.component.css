@@ -685,3 +685,13 @@ nav {
   top: 47px;
   right: 130px;
 }
+
+.block_account_blue {
+  display: flex;
+  align-items: center;
+}
+
+.img_and_text {
+  display: flex;
+  align-items: center;
+}

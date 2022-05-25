@@ -6,12 +6,12 @@
   </div>
   <div class="container_data" [class.remove_all]="remove_all">
     <img src="assets/icons_inside/translate.png" alt="">
-    <h1>Lingua: Italiano</h1>
+    <h1 (click)="linguaChange()">Lingua: Italiano</h1>
     <img class="arrow_class" src="assets/icons_inside/arrow_.png" alt="">
   </div>
   <div class="container_data" [class.remove_all]="remove_all">
     <img src="assets/icons_inside/world.png" alt="">
-    <h1>Località: Italia</h1>
+    <h1 (click)="nazioneChange()">Località: Italia</h1>
     <img class="arrow_class" src="assets/icons_inside/arrow_.png" alt="">
   </div>
   <div class="container_data" [class.remove_all]="remove_all">
@@ -46,5 +46,15 @@
   </div>
   <div *ngIf="aspetto">
     <app-aspetto></app-aspetto>
+  </div>
+
+  <div *ngIf="lingua">
+    <app-lingua></app-lingua>
+  </div>
+  <div *ngIf="nazione">
+    <app-nazione></app-nazione>
+  </div>
+  <div *ngIf="true">
+    <app-restrizioni></app-restrizioni>
   </div>
 </div>

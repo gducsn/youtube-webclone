@@ -8,7 +8,8 @@ import { AspettoComponent } from './components/search-menu/inside-menu/micro-com
 import { LinguaComponent } from './components/search-menu/inside-menu/micro-component/lingua/lingua.component';
 import { NazioneComponent } from './components/search-menu/inside-menu/micro-component/nazione/nazione.component';
 import { RestrizioniComponent } from './components/search-menu/inside-menu/micro-component/restrizioni/restrizioni.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,11 +18,14 @@ import { RestrizioniComponent } from './components/search-menu/inside-menu/micro
     AspettoComponent,
     LinguaComponent,
     NazioneComponent,
-    RestrizioniComponent
+    RestrizioniComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

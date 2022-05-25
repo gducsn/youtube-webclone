@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { of} from 'rxjs';
+import { fromEvent, of} from 'rxjs';
+import { InsideMicroService } from 'src/app/services/nav-bar/inside-micro.service';
 @Component({
   selector: 'app-search-menu',
   templateUrl: './search-menu.component.html',
@@ -7,16 +8,18 @@ import { of} from 'rxjs';
 
 })
 export class SearchMenuComponent implements OnInit {
+  constructor(private service: InsideMicroService){}
 
+  menuimp:boolean = true//this.service.menuimp;
 
   search_input_boolean: boolean = true;
   search_boolean$ = of(this.search_input_boolean)
   media_input_boolean: boolean = false;
   media_input$ = of(this.media_input_boolean);
 
-  menu_inside_boolean: boolean = false;
-  menu_inside$ = of(this.menu_inside_boolean)
-  constructor() { }
+
+
+  
 
   mediaAddClass(){
     if(window.innerWidth < 654 && !this.media_input_boolean) {
@@ -29,7 +32,7 @@ export class SearchMenuComponent implements OnInit {
 
   }
 
-
+  eventfrom = fromEvent(document, 'click')
   add(){
     this.search_boolean$.subscribe(() => this.search_input_boolean = false)
   }
@@ -38,9 +41,23 @@ export class SearchMenuComponent implements OnInit {
   }
  
 menuInside() {
-  if(!this.menu_inside_boolean) {
-    this.menu_inside$.subscribe(() => this.menu_inside_boolean = true)
-  } else (this.menu_inside$.subscribe(() => this.menu_inside_boolean = false))
+  if(!this.menuimp)
+  {this.service.menuChange();
+  this.service.menuimp$.subscribe((data:boolean) => this.menuimp = data)}
+  else if (this.menuimp){
+    this.service.menuimp$.next(false)
+    this.service.menuimp$.subscribe((data:boolean) => this.menuimp = data)
+  }
+
+
+  document.onclick = (args: any) : void => {
+  if(args.target.tagName === 'BODY') {
+    this.service.remove_all$.next(false)
+    this.service.remove_all$.subscribe((data:any) => this.service.remove_all = data)
+    this.service.menuimp$.next(false)
+    this.service.menuimp$.subscribe((data:boolean) => this.menuimp = data)
+  }
+} 
 }
 
 

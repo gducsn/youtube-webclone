@@ -9,9 +9,9 @@ import { InsideMicroService } from 'src/app/services/nav-bar/inside-micro.servic
 })
 export class InsideMenuComponent implements OnInit {
   aspetto: any = this.service.aspetto;
-  remove_all: any = this.service.remove_all;
-  secondo: boolean = false;
-  third: boolean = false;
+  remove_all: any = true //this.service.remove_all;
+  lingua: boolean = this.service.lingua;
+  nazione: boolean = this.service.nazione;
   fourth: boolean = false;
   constructor(public service: InsideMicroService) { }
 
@@ -20,9 +20,20 @@ export class InsideMenuComponent implements OnInit {
   }
   aspettoChange() {
 this.service.changeValue()
-this.service.remove_all$.subscribe((data:any) => this.remove_all = data)
-this.service.aspetto$.subscribe((data:any)=> this.aspetto = data)
+this.service.remove_all$.subscribe((data:boolean) => this.remove_all = data)
+this.service.aspetto$.subscribe((data:boolean)=> this.aspetto = data)
   }
 
+  linguaChange(){
+    this.service.linguaChange();
+    this.service.remove_all$.subscribe((data:boolean) => this.remove_all = data)
+    this.service.lingua$.subscribe((data:boolean)=> this.lingua = data)
+  }
+
+  nazioneChange() {
+    this.service.nazioneChange()
+    this.service.remove_all$.subscribe((data:boolean) => this.remove_all = data);
+    this.service.nazione$.subscribe((data:boolean) => this.nazione = data)
+  }
 }
 
