@@ -1,3 +1,6 @@
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, saepe.
-</p>
+<div class="main">
+  <div class="container" *ngFor="let data of closeSideData">
+    <img [src]="data.img" alt="">
+    <h1> {{data.text}} </h1>
+  </div>
+</div>

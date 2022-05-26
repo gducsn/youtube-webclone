@@ -103,3 +103,30 @@ export const fourObj: ObjOne[] = [
     },
 ]
 
+
+export const closeSide: ObjOne[] = [
+    {
+        img: 'assets/side_open_icons/first_section/1home.png',
+        text: 'Home'
+    },
+    {
+        img: 'assets/side_open_icons/first_section/2explore.png',
+        text: 'Esplora'
+    },
+    {
+        img: 'assets/side_open_icons/first_section/3short.png',
+        text: 'Shorts'
+    },
+    {
+        img: 'assets/side_open_icons/first_section/4sub.png',
+        text: 'Iscrizioni'
+    },
+    {
+        img: 'assets/side_open_icons/first_section/5lib.png',
+        text: 'Raccolta'
+    },
+    {
+        img: 'assets/side_open_icons/first_section/6histo.png',
+        text: 'Cronologia'
+    },
+]

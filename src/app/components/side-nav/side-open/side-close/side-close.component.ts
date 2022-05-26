@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { closeSide } from '../../mockup/firstSection';
 
 @Component({
   selector: 'app-side-close',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-close.component.css']
 })
 export class SideCloseComponent implements OnInit {
+  closeSideData = closeSide;
 
   constructor() { }
 
