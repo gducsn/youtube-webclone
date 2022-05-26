@@ -2,30 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchMenuComponent } from './components/search-menu/search-menu.component';
-import { InsideMenuComponent } from './components/search-menu/inside-menu/inside-menu.component';
-import { AspettoComponent } from './components/search-menu/inside-menu/micro-component/aspetto/aspetto.component';
-import { LinguaComponent } from './components/search-menu/inside-menu/micro-component/lingua/lingua.component';
-import { NazioneComponent } from './components/search-menu/inside-menu/micro-component/nazione/nazione.component';
-import { RestrizioniComponent } from './components/search-menu/inside-menu/micro-component/restrizioni/restrizioni.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { SearchMenuModuleModule } from './components/search-menu/search-menu-module/search-menu-module.module';
+import { SideOpenComponent } from './components/side-nav/side-open/side-open.component';
+import { SideCloseComponent } from './components/side-nav/side-open/side-close/side-close.component';
+import { LoginButtonComponent } from './components/shared/design/login-button/login-button.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    SearchMenuComponent,
-    InsideMenuComponent,
-    AspettoComponent,
-    LinguaComponent,
-    NazioneComponent,
-    RestrizioniComponent,
-    
+    SideOpenComponent,
+    SideCloseComponent,
+    LoginButtonComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSlideToggleModule
+    SearchMenuModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

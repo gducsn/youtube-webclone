@@ -12,6 +12,8 @@ nazione: boolean = false;
 menuimp: boolean = false;
 restrizioni: boolean = false;
 
+sidebar: boolean = true;
+
 remove_all$: BehaviorSubject<boolean> = new BehaviorSubject(this.remove_all)
   
 aspetto$: BehaviorSubject<boolean>  = new BehaviorSubject(this.aspetto)
@@ -23,6 +25,8 @@ nazione$: BehaviorSubject<boolean> = new BehaviorSubject(this.nazione)
 menuimp$: BehaviorSubject<boolean> = new BehaviorSubject(this.menuimp)
 
 restrizioni$: BehaviorSubject<boolean> = new BehaviorSubject(this.restrizioni)
+
+sidebar$: BehaviorSubject<boolean> = new BehaviorSubject(this.sidebar)
 
   changeValue() {
     this.remove_all$.next(!this.remove_all)
@@ -46,6 +50,11 @@ changeRes(){
   this.remove_all$.next(!this.remove_all)
   this.restrizioni$.next(!this.restrizioni)
 }
+
+sideBar() {
+  this.sidebar$.next(!this.sidebar);
+}
+
 
 
   constructor() { }

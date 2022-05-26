@@ -1,0 +1,95 @@
+<div class="main" *ngIf="sidebar">
+  <div class="_block">
+    <div class="_inside" *ngFor="let item of firstObj; let i = index" [class._inside_first]="i == 0">
+      <img [src]="item.img" alt="">
+      <h1> {{item.text}} </h1>
+    </div>
+  </div>
+
+
+  <div class="_block">
+    <div class="_inside" *ngFor="let item of secondObj">
+      <img [src]="item.img" alt="">
+      <h1> {{item.text}} </h1>
+    </div>
+  </div>
+
+  <div class="_block">
+    <div class="_inside_login">
+      <h1> Effettua l'accesso per mettere Mi piace ai video, commentare e iscriverti ai canali. </h1>
+      <div class="_login_button">
+        <app-login-button></app-login-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="_block _best_of">
+    <div class="main_text">
+      <h1>IL MEGLIO DI YOUTUBE</h1>
+    </div>
+
+    <div class="_inside" *ngFor="let item of thirdObj">
+      <img class="_grey" [src]="item.img" alt="">
+      <h1> {{item.text}} </h1>
+    </div>
+  </div>
+
+  <div class="_block">
+    <div class="_inside">
+      <img src="assets/side_open_icons/single/add.png" alt="">
+      <h1> Sfoglia Canali </h1>
+    </div>
+  </div>
+
+  <div class="_block _best_of">
+    <div class="main_text">
+      <h1>ALTRO DA YOUTUBE</h1>
+    </div>
+
+    <div class="_inside" *ngFor="let item of twoEl">
+      <img class="_grey" [src]="item.img" alt="">
+      <h1> {{item.text}} </h1>
+    </div>
+  </div>
+
+
+  <div class="_block">
+    <div class="_inside" *ngFor="let item of fourObj; let i = index">
+      <img [src]="item.img" alt="">
+      <h1> {{item.text}} </h1>
+    </div>
+  </div>
+
+
+  <div class="_block _best_of _last">
+    <div class="main_text _last_text">
+      <div class="anchor_text">
+        <h1>Informazioni</h1>
+        <h1>Stampa</h1>
+        <h1>Copyright</h1>
+        <h1>Contattaci</h1>
+        <h1>Creator</h1>
+        <h1>Pubblicità</h1>
+        <h1>Sviluppatori</h1>
+      </div>
+      <div class="anchor_text">
+        <h1>Termini</h1>
+        <h1>Privacy</h1>
+        <h1>Norme e sicurezza</h1>
+        <h1>Come funziona Youtube</h1>
+        <h1>Prova le nuove funzioni </h1>
+      </div>
+      <div class="anchor_text _last_one">
+        <h1>© 2022 Google LLC</h1>
+      </div>
+    </div>
+
+
+  </div>
+
+
+</div>
+
+<div class="second_main" *ngIf="sidebar == false">
+  <app-side-close></app-side-close>
+</div>

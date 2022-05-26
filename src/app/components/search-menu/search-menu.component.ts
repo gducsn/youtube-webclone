@@ -11,7 +11,7 @@ export class SearchMenuComponent implements OnInit {
   constructor(private service: InsideMicroService){}
 
   menuimp:boolean = this.service.menuimp;
-
+  sidebar:boolean = this.service.sidebar
   search_input_boolean: boolean = true;
   search_boolean$ = of(this.search_input_boolean)
   media_input_boolean: boolean = false;
@@ -64,6 +64,9 @@ this.documentOnclick();
   
 }
 
-
+sideBar() {
+  this.service.sidebar$.next(!this.service.sidebar)
+  this.service.sidebar$.subscribe(data => this.service.sidebar = data)
+}
 
 }

@@ -7,3 +7,4 @@ ___________
 ![alt text](./screen/navmenu1.png)
 ![alt text](./screen/navmenu2.png)
 ![alt text](./screen/navmenu3.png)
+![alt text](./screen/sidebar1.png)
